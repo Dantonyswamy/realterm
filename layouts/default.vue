@@ -1,9 +1,9 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
-      :clipped="clipped"
+      :clipped="clipped"     
       fixed
       app
     >
@@ -13,6 +13,7 @@
           :key="i"
           :to="item.to"
           router
+          active-class="success"
           exact
         >
           <v-list-tile-action>
@@ -30,24 +31,15 @@
       app
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-tooltip bottom>
-        <v-btn
-          v-if="drawer"
-          slot="activator"
-          icon
-          @click.stop="miniVariant = !miniVariant"
-        >
-          <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-        </v-btn>
-      </v-tooltip>
-       
-      <v-avatar
-        size="52"          
-        tile                  
-        style="cursor:pointer"
+      
+      <v-btn
+        v-if="drawer"
+        slot="activator"
+        icon
+        @click.stop="miniVariant = !miniVariant"
       >
-        <img src="/logo-en.png">
-      </v-avatar>
+        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
+      </v-btn>
     </v-toolbar>
     <v-content>
       <v-container>
@@ -57,9 +49,10 @@
     
     <v-footer
       :fixed="fixed"
+      color="secondary"        
       app
     >
-      <span>&copy; 2019</span>
+      <span class="white--text">&copy; 2019- RealTerm Energy</span>
     </v-footer>
   </v-app>
 </template>
@@ -73,13 +66,13 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'apps',
-          title: 'Welcome',
+          icon: 'home',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'bubble_chart',
-          title: 'Inspire',
+          icon: 'map',
+          title: 'Maps',
           to: '/inspire'
         }
       ],

@@ -1,22 +1,8 @@
 # realterm
 
-> User interface for maintenence program 
+> User interface for RealTerm Energy clients 
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+This is a front-end project developed for RealTerm Energy for client accessablity to important documents and report issues on installed streetlights.
+The objective of this prototype is to develop a cross platform user interface that operates in all dievices.
+The contents of this project is maintained by the maintenence committe of RealTerm Energy. 
+ 
