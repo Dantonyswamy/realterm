@@ -30,16 +30,25 @@
       fixed
       app
     >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
+      <v-tooltip bottom>
+        <v-toolbar-side-icon slot="activator" @click="drawer = !drawer" />
+        <span>menu</span>
+      </v-tooltip> 
+      <v-tooltip bottom>
+        <v-btn
+          v-if="drawer"
+          slot="activator"
+          icon
+          @click.stop="miniVariant = !miniVariant;"
+        >
+          <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
+        </v-btn>
+        <span>expand</span>
+      </v-tooltip>
       
-      <v-btn
-        v-if="drawer"
-        slot="activator"
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
+      <v-toolbar-title>Service Center</v-toolbar-title>
+      
+      <v-spacer />
     </v-toolbar>
     <v-content>
       <v-container>
@@ -49,10 +58,17 @@
     
     <v-footer
       :fixed="fixed"
-      color="secondary"        
       app
+      
+      color="secondary"
     >
-      <span class="white--text">&copy; 2019- RealTerm Energy</span>
+      <v-flex
+        text-xs-center
+        white--text
+        xs12
+      >
+        <span>&copy; 2019- RealTerm Energy Inc</span>
+      </v-flex>  
     </v-footer>
   </v-app>
 </template>
