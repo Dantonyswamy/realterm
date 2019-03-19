@@ -53,7 +53,7 @@
                 ripple
         >
           <v-card-title primary class="title">
-            Important Documents
+            Egnyte documents
           </v-card-title>
           <v-card-text>Get access to your important documents</v-card-text>
         </v-card>

@@ -28,6 +28,7 @@
     <v-toolbar
       :clipped-left="clipped"
       fixed
+      color="#FCFAFB"
       app
     >
       <v-tooltip bottom>
