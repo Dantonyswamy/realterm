@@ -88,9 +88,14 @@ export default {
           to: '/'
         },
         {
-          icon: 'map',
-          title: 'Maps',
-          to: '/inspire'
+          icon: 'business',
+          title: 'Building Connected',
+          to: '/bc'
+        },
+        {
+          icon: 'library_books',
+          title: 'Client Documents',
+          to: '/clientdocs'
         }
       ],
       miniVariant: false,

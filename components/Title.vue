@@ -7,7 +7,7 @@
           align-center
           justify-center
         >
-          <img src="/logo-en.png" alt="realterm_logo" height="150">
+          <img src="https://firebasestorage.googleapis.com/v0/b/realtermenergy-58930.appspot.com/o/logo.png?alt=media&token=5aa39cb2-da13-4a52-90cb-6b9ac1982357" alt="realterm_logo" height="200">
         </v-layout>
       </v-parallax>
     </v-responsive>    
